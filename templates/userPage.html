@@ -1,0 +1,142 @@
+{% extends 'baseUserPage.html' %}
+
+    {% block schedule %}
+        <div>
+            <a href="http://127.0.0.1:5000/users/ScheduleMaker/{{user.username}}"> <h1> Schedule </h1> </a>
+
+            <table>
+                <thead>
+                    {% if day_number == 0 %}
+                    <th> Monday </th>
+                    {% endif %}
+                    {% if day_number == 1 %}
+                    <th> Tuesday </th>
+                    {% endif %}
+                    {% if day_number == 2 %}
+                    <th> Wednesday </th>
+                    {% endif %}
+                    {% if day_number == 3 %}
+                    <th> Thursday </th>
+                    {% endif %}
+                    {% if day_number == 4 %}
+                    <th> Friday </th>
+                    {% endif %}
+                    {% if day_number == 5 %}
+                    <th> Saturday </th>
+                    {% endif %}
+                    {% if day_number == 6 %}
+                    <th> Sunday </th>
+                    {% endif %}
+                    <th> Task </th>
+                    <th> Time of Task </th>
+                </thead>
+
+                <tbody>
+
+                    {% for task in all_tasks %}
+                    <tr>
+                        {% if day in task.day %}
+                        <td></td>
+                        <td> {{ task.entry }} </td>
+                        <td> {{task.timestamp }}</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endblock %}
+        
+    {% block toDoList %}
+        <div>
+        <a href="http://127.0.0.1:5000/users/ToDoTask/{{user.username}}"><h1> Todo List </h1></a>
+
+        <table>
+            <thead>
+                <th> Task </th>
+                <th> Day of Completion </th>
+                <th> Time of Completion </th>
+            </thead>
+        
+            <tbody>
+                {% for task in all_tasks_todo %}
+                <tr>
+                    {% if task.user_id == user.id %}
+                    <td> {{task.entry}} </td>
+                    <td> {{ task.date_due}} </td>
+                    <td> {{task.time}} </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    {% endblock %}
+        
+    {% block goals %}
+        <div>
+            <a href="http://127.0.0.1:5000/users/Goals/{{user.username}}"><h1> Goals </h1></a>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th> Goal </th>
+                        <th> Goal Type </th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    {% for goal in all_goals %}
+                        <tr>
+                            {% if 'short' in goal.goal_code %}
+                            <td> {{goal.goal}} </td>
+                            <td> {{goal.goal_code}} </td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endblock %}
+        
+    {% block mood %}
+    <a><h1> Mood </h1></a>
+        <div class="moodDiv">
+            {% if 'Joyful' in user.user_mood %}
+            <p> {{book}} {{chapter}}:{{the_verse}}</p>
+            <p id="verse"> {{user_verse}} </p>
+            {% endif %}
+
+            {% if 'Eager' in user.user_mood %}
+            <p> {{book}} {{chapter}}:{{the_verse}}</p>
+            <p> {{user_verse}} </p>
+            {% endif %}
+
+            {% if 'Surprised' in user.user_mood %}
+            <p> {{book}} {{chapter}}:{{the_verse}}</p>
+            <p> {{user_verse}} </p>
+            {% endif %}
+
+            {% if 'Uncertain' in user.user_mood %}
+            <p> {{book}} {{chapter}}:{{the_verse}}</p>
+            <p> {{user_verse}} </p>
+            {% endif %}
+
+            {% if 'Angry' in user.user_mood %}
+            <p> {{book}} {{chapter}}:{{the_verse}}</p>
+            <p> {{user_verse}} </p>
+            {% endif %}
+
+            {% if 'Disgusted' in user.user_mood %}
+            <p> {{book}} {{chapter}}:{{the_verse}}</p>
+            <p> {{user_verse}} </p>
+            {% endif %}
+
+            {% if 'Sad' in user.user_mood %}
+            <p> {{book}} {{chapter}}:{{the_verse}}</p>
+            <p> {{user_verse}} </p>
+            {% endif %}
+
+            
+        </div>
+    {% endblock %}

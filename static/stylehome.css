@@ -1,0 +1,125 @@
+body {
+
+    background-image: url('https://img.freepik.com/free-photo/view-retro-looking-computer-workstation_23-2150805090.jpg?t=st=1731526044~exp=1731529644~hmac=ddf46d21aa4f0735930eef811d1d183fd3d7f949e57a13b059bc870d074a0728&w=900');
+    background-size: cover;
+
+}
+
+.navbar {
+
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+
+#navdiv {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#navlist {
+
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+#navlist a {
+    text-decoration: none;
+    outline: none;
+}
+
+#bodyBckg {
+
+    background-color: rgba(239, 239, 239, .2);
+    height: 712px;
+
+}
+
+#contentBckg {
+
+    margin-top: 90px;
+
+}
+
+#title {
+
+    display: flex;
+    justify-content:center;
+    font-family: "Fascinate Inline", system-ui;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+#slogan {
+
+    display: flex;
+    justify-content:center;
+    font-family: "Fascinate Inline", system-ui;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+#register {
+
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-family: "Fascinate Inline", system-ui;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .1em;
+    padding: 10px 10px;
+    transition: .5s;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+#register:hover {
+
+    background: var(--clr);
+    letter-spacing: .25em;
+    box-shadow: 0 , 0 , 35px var(--clr);
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.registerdiv {
+
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-family: "Fascinate Inline", system-ui;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 8px;
+
+}
+
+#flash {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: underline;
+}

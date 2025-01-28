@@ -1,0 +1,221 @@
+body {
+    font-size: 13px;
+    background-image: url('https://img.freepik.com/free-photo/view-retro-looking-computer-workstation_23-2150805090.jpg?t=st=1731526044~exp=1731529644~hmac=ddf46d21aa4f0735930eef811d1d183fd3d7f949e57a13b059bc870d074a0728&w=900');
+    background-size: 160%;
+    background-position-x: 50%;
+    background-position-y: 22%;
+    background-repeat: no-repeat;
+    height: 712px;
+    /* background-color: #CA7B80; */
+}
+
+#bodyBckg {
+    background-color: rgba(239, 239, 239, .2);
+    height: 712px;
+}
+
+.navbar {
+
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+
+#navdiv {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#navlist {
+
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+
+#nav {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-family: "Fascinate Inline", system-ui;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .1em;
+    padding: 10px 10px;
+    transition: .5s;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav:hover {
+    background: var(--clr);
+    letter-spacing: .25em;
+    box-shadow: 0 , 0 , 35px var(--clr);
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 712px;
+    width: 100%;
+}
+
+td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        background-color: rgba(239, 239, 239, .3);
+        color: black;
+}
+
+td:hover {
+    background-color: #CA7B80;
+    transition: .75s;
+}
+
+thead td {
+    background-color: #CA7B80;
+    color: black;
+    font-size: 15px;
+    font-family: "Fascinate Inline", system-ui;
+}
+
+#todoTable {
+    font-family: "Fascinate Inline", system-ui;
+    font-size: 15px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 300px;
+    width: 75%;
+}
+
+#todoTable td{
+    background-color: #CA7B80;
+}
+
+#todoTable td:hover {
+    background-color: rgba(239, 239, 239, .3);
+    transition: .75s;
+}
+
+#goalTable {
+    font-family: "Fascinate Inline", system-ui;
+    font-size: 15px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 150px;
+    width: 75%;
+}
+
+#goalTable td{
+    background-color: #CA7B80;
+    padding: 3px;
+}
+
+#goalTable td:hover {
+    background-color: rgba(239, 239, 239, .3);
+    transition: .75s;
+}
+
+#stepTable {
+    font-family: "Fascinate Inline", system-ui;
+    font-size: 15px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 75px;
+    width: 50%;
+}
+
+#stepTable td{
+    background-color: #CA7B80;
+    padding: 3px;
+}
+
+#stepTable td:hover {
+    background-color: rgba(239, 239, 239, .3);
+    transition: .75s;
+}
+
+
+
+thead th {
+    background-color: #CA7B80;
+    color: black;
+    font-size: 15px;
+    font-family: "Fascinate Inline", system-ui;
+}
+
+#goalsSteps {
+    display:flex;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+button {
+    font-family: "Fascinate Inline", system-ui;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #CA7B80; 
+    color: Black;
+    padding: 10px 22px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: none;
+    transition: .5s;
+    letter-spacing: .25em;
+    box-shadow: 0 , 0 , 35px var(--clr);
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#time {
+    background-color: #CA7B80;
+    color: black;
+    font-size: 15px;
+    font-family: "Fascinate Inline", system-ui;
+}
+
+#form h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+form {
+    text-align: center;
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+}
+

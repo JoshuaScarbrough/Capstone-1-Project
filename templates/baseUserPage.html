@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importing Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fascinate+Inline&family=Macondo+Swash+Caps&family=Monofett&family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href='\static\stylehomemood.css'> 
+
+    <title>Mood</title>
+
+</head>
+
+
+<body>
+
+    <div class="bodyBckg">
+    
+        <!-- Nav bar that has the profile picture, username, and consective days the user logged in -->
+        <nav class="topNav">
+            <img src="{{user.profile_picture}}", height="85px", width="85px", alt="User Profile Picture">
+            <p> {{user.username}}  (Logged in!) </p>
+            <p> Todays date is: {{today}} </p>
+            <p> Consecutive Days Logged in: {{consecutive_days}} </p> 
+            <p> <a href="http://127.0.0.1:5000/logout" style="--clr:#CA7B80" id="nav"> <button> Log out </button> </a> </p>
+        </nav>
+
+
+            <div class="moodContent">
+            {% block content %} {% endblock %}
+            </div>
+
+        <div id="frontPage">
+            <div class="schedule">
+                {% block schedule %} {% endblock %}
+            </div>
+
+            <div class="toDoList">
+                {% block toDoList %} {% endblock %}
+            </div>
+
+
+            <div class="goals">
+                {% block goals %} {% endblock %}
+            </div>
+        </div>
+
+            <div class="mood">
+                {% block mood %} {% endblock %}
+            </div>
+
+
+    </div>
+
+</body>
+</html>

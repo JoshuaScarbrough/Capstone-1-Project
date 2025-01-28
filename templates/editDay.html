@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importing Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fascinate+Inline&family=Macondo+Swash+Caps&family=Monofett&family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href='\static\styleEdit.css'> 
+    <title>Edit Day</title>
+</head>
+
+<body class="bodyBckg">
+
+    <nav class="navbar">
+        <div id="navdiv"> 
+            <h1> Accountabilit-E </h1>
+            <ul>
+                <li id="navlist"> <a href="http://127.0.0.1:5000/users/{{user.username}}" style="--clr:#CA7B80" id="nav"> User Page </a> </li>
+                <li id="navlist"> <a href="http://127.0.0.1:5000/users/ScheduleFull/{{user.username}}" style="--clr:#CA7B80" id="nav"> Schedule </a> </li>
+                <li id="navlist"> <a href="http://127.0.0.1:5000/logout" style="--clr:#CA7B80" id="nav"> Log out </a> </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <div id="delete">
+    <h2> Delete Task </h2>
+
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+    
+        {% for field in form if field.widget.input_type != 'hidden' %}
+        <p>
+            {{ field.label }}
+            {{ field }}
+        </p>
+        {% endfor %}  
+
+        <button type="submit"> Delete </button>
+
+    </form>
+    </div>
+</body>
+
+</html>

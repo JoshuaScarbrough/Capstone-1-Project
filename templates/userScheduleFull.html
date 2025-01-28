@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Importing Google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fascinate+Inline&family=Macondo+Swash+Caps&family=Monofett&family=Playfair+Display&display=swap" rel="stylesheet">
+     
+     <link rel="stylesheet" href='\static\styleScheduleFull.css'> 
+
+    <title> Full Schedule </title>
+</head>
+<body>
+<section class="bodyBckg">
+
+    <nav class="navbar">
+        <div id="navdiv"> 
+            <h1> Accountabilit-E </h1>
+            <ul>
+                <li id="navlist"> <a href="http://127.0.0.1:5000/users/{{user.username}}" style="--clr:#CA7B80" id="nav"> User Page </a> </li>
+                <li id="navlist">  <a href="http://127.0.0.1:5000/users/EditDay/{{user.username}}" style="--clr:#CA7B80" id="nav"> Edit </a> </li>
+                <li id="navlist"> <a href="http://127.0.0.1:5000/users/ScheduleMaker/{{user.username}}" style="--clr:#CA7B80" id="nav"> Back </a> </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <div class="schedule">
+
+        <table>
+            <thead>
+                <tr>
+                    
+                    <td> Time </td>
+                    <td> Monday </td>
+                    <td> Tuesday </td>
+                    <td> Wednesday </td>
+                    <td> Thursday </td>
+                    <td> Friday </td>
+                    <td> Saturday </td>
+                    <td> Sunday </td>
+    
+                </tr>
+            </thead>
+    
+            <tbody>
+                {%- set start = 0 -%}
+                {%- set end = 59 -%}
+                {%- set onestart = 100 -%}
+                {%- set oneend = 159 -%}
+                {%- set twostart = 200 -%}
+                {%- set twoend = 259 -%}
+                {%- set threestart = 300 -%}
+                {%- set threeend = 359 -%}
+                {%- set fourstart = 400 -%}
+                {%- set fourend = 459 -%}
+                {%- set fivestart = 500 -%}
+                {%- set fiveend = 559 -%}
+                {%- set sixstart = 600 -%}
+                {%- set sixend = 659 -%}
+                {%- set sevenstart = 700 -%}
+                {%- set sevenend = 759 -%}
+                {%- set eightstart = 800 -%}
+                {%- set eightend = 859 -%}
+                {%- set ninestart = 900 -%}
+                {%- set nineend = 959 -%}
+                {%- set tenstart = 1000 -%}
+                {%- set tenend = 1059 -%}
+                {%- set elevenstart = 1100 -%}
+                {%- set elevenend = 1159 -%}
+                {%- set twelvestart = 1200 -%}
+                {%- set twelveend = 1259 -%}
+                {%- set thirteenstart = 1300 -%}
+                {%- set thirteenend = 1359 -%}
+                {%- set fourteenstart = 1400 -%}
+                {%- set fourteenend = 1459 -%}
+                {%- set fifteenstart = 1500 -%}
+                {%- set fifteenend = 1559 -%}
+                {%- set sixteenstart = 1600 -%}
+                {%- set sixteenend = 1659 -%}
+                {%- set seventeenstart = 1700 -%}
+                {%- set seventeenend = 1759 -%}
+                {%- set eighteenstart = 1800 -%}
+                {%- set eighteenend = 1859 -%}
+                {%- set ninteenstart = 1900 -%}
+                {%- set ninteenend = 1959 -%}
+                {%- set twentystart = 2000 -%}
+                {%- set twentyend = 2059 -%}
+                {%- set twentyonestart = 2100 -%}
+                {%- set twentyoneend = 2159 -%}
+                {%- set twentytwostart = 2200 -%}
+                {%- set twentytwoend = 2259 -%}
+                {%- set twentythreestart = 2300 -%}
+                {%- set twentythreeend = 2359 -%}
+    
+                <tr>
+                    <td id="time">12:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= start and task.timestamp <= end %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= start and task.timestamp <= end %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= start and task.timestamp <= end %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= start and task.timestamp <= end %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= start and task.timestamp <= end %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= start and task.timestamp <= end %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= start and task.timestamp <= end %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">1:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= onestart and task.timestamp <= oneend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= onestart and task.timestamp <= oneend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= onestart and task.timestamp <= oneend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= onestart and task.timestamp <= oneend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= onestart and task.timestamp <= oneend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= onestart and task.timestamp <= oneend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= onestart and task.timestamp <= oneend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">2:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= twostart and task.timestamp <= twoend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= twostart and task.timestamp <= twoend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= twostart and task.timestamp <= twoend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= twostart and task.timestamp <= twoend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= twostart and task.timestamp <= twoend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= twostart and task.timestamp <= twoend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= twostart and task.timestamp <= twoend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">3:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= threestart and task.timestamp <= threeend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= threestart and task.timestamp <= threeend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= threestart and task.timestamp <= threeend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= threestart and task.timestamp <= threeend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= threestart and task.timestamp <= threeend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= threestart and task.timestamp <= threeend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= threestart and task.timestamp <= threeend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">4:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= fourstart and task.timestamp <= fourend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= fourstart and task.timestamp <= fourend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= fourstart and task.timestamp <= fourend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= fourstart and task.timestamp <= fourend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= fourstart and task.timestamp <= fourend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= fourstart and task.timestamp <= fourend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= fourstart and task.timestamp <= fourend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">5:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= fivestart and task.timestamp <= fiveend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= fivestart and task.timestamp <= fiveend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= fivestart and task.timestamp <= fiveend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= fivestart and task.timestamp <= fiveend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= fivestart and task.timestamp <= fiveend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= fivestart and task.timestamp <= fiveend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= fivestart and task.timestamp <= fiveend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">6:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= sixstart and task.timestamp <= sixend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= sixstart and task.timestamp <= sixend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= sixstart and task.timestamp <= sixend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= sixstart and task.timestamp <= sixend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= sixstart and task.timestamp <= sixend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= sixstart and task.timestamp <= sixend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= sixstart and task.timestamp <= sixend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">7:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= sevenstart and task.timestamp <= sevenend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= sevenstart and task.timestamp <= sevenend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= sevenstart and task.timestamp <= sevenend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= sevenstart and task.timestamp <= sevenend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= sevenstart and task.timestamp <= sevenend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= sevenstart and task.timestamp <= sevenend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= sevenstart and task.timestamp <= sevenend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">8:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= eightstart and task.timestamp <= eightend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= eightstart and task.timestamp <= eightend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= eightstart and task.timestamp <= eightend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= eightstart and task.timestamp <= eightend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= eightstart and task.timestamp <= eightend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= eightstart and task.timestamp <= eightend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= eightstart and task.timestamp <= eightend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">9:00 AM</td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Monday' in task.day %}
+                                {% if task.timestamp >= ninestart and task.timestamp <= nineend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Tuesday' in task.day %}
+                                {% if task.timestamp >= ninestart and task.timestamp <= nineend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Wednesday' in task.day %}
+                                {% if task.timestamp >= ninestart and task.timestamp <= nineend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Thursday' in task.day %}
+                                {% if task.timestamp >= ninestart and task.timestamp <= nineend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Friday' in task.day %}
+                                {% if task.timestamp >= ninestart and task.timestamp <= nineend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Saturday' in task.day %}
+                                {% if task.timestamp >= ninestart and task.timestamp <= nineend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> 
+                        {% for task in all_tasks %}
+                            {% if 'Sunday' in task.day %}
+                                {% if task.timestamp >= ninestart and task.timestamp <= nineend %}
+                                    {{task.entry}}, ({{task.id}})
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">10:00 AM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= tenstart and task.timestamp <= tenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= tenstart and task.timestamp <= tenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= tenstart and task.timestamp <= tenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= tenstart and task.timestamp <= tenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= tenstart and task.timestamp <= tenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= tenstart and task.timestamp <= tenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= tenstart and task.timestamp <= tenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">11:00 AM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= elevenstart and task.timestamp <= elevenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= elevenstart and task.timestamp <= elevenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= elevenstart and task.timestamp <= elevenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= elevenstart and task.timestamp <= elevenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= elevenstart and task.timestamp <= elevenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= elevenstart and task.timestamp <= elevenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= elevenstart and task.timestamp <= elevenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">12:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= twelvestart and task.timestamp <= twelveend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= twelvestart and task.timestamp <= twelveend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= twelvestart and task.timestamp <= twelveend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= twelvestart and task.timestamp <= twelveend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= twelvestart and task.timestamp <= twelveend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= twelvestart and task.timestamp <= twelveend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= twelvestart and task.timestamp <= twelveend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">1:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= thirteenstart and task.timestamp <= thirteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= thirteenstart and task.timestamp <= thirteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= thirteenstart and task.timestamp <= thirteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= thirteenstart and task.timestamp <= thirteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= thirteenstart and task.timestamp <= thirteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= thirteenstart and task.timestamp <= thirteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= thirteenstart and task.timestamp <= thirteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">2:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= fourteenstart and task.timestamp <= fourteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= fourteenstart and task.timestamp <= fourteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= fourteenstart and task.timestamp <= fourteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= fourteenstart and task.timestamp <= fourteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= fourteenstart and task.timestamp <= fourteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= fourteenstart and task.timestamp <= fourteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= fourteenstart and task.timestamp <= fourteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">3:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= fifteenstart and task.timestamp <= fifteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= fifteenstart and task.timestamp <= fifteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= fifteenstart and task.timestamp <= fifteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= fifteenstart and task.timestamp <= fifteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= fifteenstart and task.timestamp <= fifteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= fifteenstart and task.timestamp <= fifteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= fifteenstart and task.timestamp <= fifteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">4:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= sixteenstart and task.timestamp <= sixteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= sixteenstart and task.timestamp <= sixteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= sixteenstart and task.timestamp <= sixteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= sixteenstart and task.timestamp <= sixteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= sixteenstart and task.timestamp <= sixteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= sixteenstart and task.timestamp <= sixteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= sixteenstart and task.timestamp <= sixteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">5:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= seventeenstart and task.timestamp <= seventeenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= seventeenstart and task.timestamp <= seventeenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= seventeenstart and task.timestamp <= seventeenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= seventeenstart and task.timestamp <= seventeenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= seventeenstart and task.timestamp <= seventeenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= seventeenstart and task.timestamp <= seventeenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= seventeenstart and task.timestamp <= seventeenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">6:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= eighteenstart and task.timestamp <= eighteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= eighteenstart and task.timestamp <= eighteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= eighteenstart and task.timestamp <= eighteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= eighteenstart and task.timestamp <= eighteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= eighteenstart and task.timestamp <= eighteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= eighteenstart and task.timestamp <= eighteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= eighteenstart and task.timestamp <= eighteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">7:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= ninteenstart and task.timestamp <= ninteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= ninteenstart and task.timestamp <= ninteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= ninteenstart and task.timestamp <= ninteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= ninteenstart and task.timestamp <= ninteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= ninteenstart and task.timestamp <= ninteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= ninteenstart and task.timestamp <= ninteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= ninteenstart and task.timestamp <= ninteenend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">8:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= twentystart and task.timestamp <= twentyend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= twentystart and task.timestamp <= twentyend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= twentystart and task.timestamp <= twentyend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= twentystart and task.timestamp <= twentyend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= twentystart and task.timestamp <= twentyend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= twentystart and task.timestamp <= twentyend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= twentystart and task.timestamp <= twentyend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">9:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= twentyonestart and task.timestamp <= twentyoneend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= twentyonestart and task.timestamp <= twentyoneend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= twentyonestart and task.timestamp <= twentyoneend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= twentyonestart and task.timestamp <= twentyoneend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= twentyonestart and task.timestamp <= twentyoneend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= twentyonestart and task.timestamp <= twentyoneend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= twentyonestart and task.timestamp <= twentyoneend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">10:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= twentytwostart and task.timestamp <= twentytwoend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= twentytwostart and task.timestamp <= twentytwoend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= twentytwostart and task.timestamp <= twentytwoend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= twentytwostart and task.timestamp <= twentytwoend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= twentytwostart and task.timestamp <= twentytwoend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= twentytwostart and task.timestamp <= twentytwoend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= twentytwostart and task.timestamp <= twentytwoend %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td id="time">11:00 PM</td>
+                    <td>
+                        {% for task in all_tasks %}
+                        {% if 'Monday' in task.day %}
+                            {% if task.timestamp >= start and task.timestamp <= end %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Tuesday' in task.day %}
+                            {% if task.timestamp >= start and task.timestamp <= end %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Wednesday' in task.day %}
+                            {% if task.timestamp >= start and task.timestamp <= end %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Thursday' in task.day %}
+                            {% if task.timestamp >= start and task.timestamp <= end %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Friday' in task.day %}
+                            {% if task.timestamp >= start and task.timestamp <= end %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Saturday' in task.day %}
+                            {% if task.timestamp >= start and task.timestamp <= end %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> 
+                    {% for task in all_tasks %}
+                        {% if 'Sunday' in task.day %}
+                            {% if task.timestamp >= start and task.timestamp <= end %}
+                                {{task.entry}}, ({{task.id}})
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+    
+            </tbody>
+    
+        </table>
+    
+    </div>
+</section>
+
+</body>
+</html>

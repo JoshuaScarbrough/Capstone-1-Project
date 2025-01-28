@@ -1,0 +1,47 @@
+{% extends 'baseRegister_Login.html' %}
+
+{% block nav %}
+<nav class="navbar">
+    <div id="navdiv"> 
+        <h1> Accountabilit-E </h1>
+        <ul>
+            <li id="navlist"> <a href="http://127.0.0.1:5000/" style="--clr:#CA7B80" id="begin"> Home </a> </li>
+            <!-- <li id="navlist"> <a href=""> About </a> </li>
+            <li id="navlist"> <a href=""> Contact </a> </li> -->
+            <li id="navlist"> <a href="http://127.0.0.1:5000/register" style="--clr:#CA7B80" id="begin"> Register </a> </li>
+        </ul>
+        
+    </div>
+</nav>
+
+<div id="flash"> 
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+     <ul>
+        {% for message in messages %}
+         <div>{{ message }}</div>
+        {% endfor %}
+    </ul>
+  {% endif %}
+ {% endwith %}
+{% endblock %}
+</div>
+
+{% block content %}
+<form method="POST" class="registerdiv">
+    {{ form.hidden_tag() }}
+
+    <h1>Login</h1>
+
+    {% for field in form if field.widget.input_type != 'hidden' %}
+    <p>
+        {{ field.label }}
+        {{ field }}
+    </p>
+
+    {% endfor %}
+
+    <button type="submit"> Begin </button>
+
+</form>
+{% endblock %}

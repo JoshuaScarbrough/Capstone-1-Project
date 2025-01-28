@@ -1,0 +1,157 @@
+  body {
+    background-image: url('https://img.freepik.com/free-photo/view-retro-looking-computer-workstation_23-2150805090.jpg?t=st=1731526044~exp=1731529644~hmac=ddf46d21aa4f0735930eef811d1d183fd3d7f949e57a13b059bc870d074a0728&w=900');
+    background-size: cover;
+    background-position-y: 25%;
+  }
+
+  .bodyBckg {
+    background-color: rgba(239, 239, 239, .1);
+    height: 680px;
+  }
+
+  a {
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: underline black;
+    outline: none;
+    text-align: center;
+  }
+
+  a:visited {
+    color: black;
+  }
+
+  .topNav {
+    font-family: "Fascinate Inline", system-ui;
+    background-color: rgba(239, 239, 239, .4);
+    box-shadow: 0 0 10px 5px rgba(239, 239, 239, .4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 14px, 17px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .topNav img {
+    padding: 5px;
+    border-radius: 45px;
+  }
+
+  .topNav p {
+    padding-top: 18px;
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+
+  .moodContent {
+    font-family: "Fascinate Inline", system-ui;
+    background-color: rgba(239, 239, 239, .4);
+    box-shadow: 0 0 10px 5px rgba(239, 239, 239, .4);
+    text-align: center;
+    max-width: fit-content;
+    margin: auto;
+    padding: 25px;
+    margin-top: 2%;
+    font-size: 30px;
+  }
+
+  .moodContent:hover {
+    background-color: rgba(239, 239, 239, .4);
+  }
+
+  #moodSubmit {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-family: "Fascinate Inline", system-ui;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .1em;
+    padding: 10px 10px;
+    transition: .5s;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  #moodSubmit:hover {
+
+    background: var(--clr);
+    letter-spacing: .25em;
+    box-shadow: 0 , 0 , 35px var(--clr);
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .schedule {
+    font-family: "Fascinate Inline", system-ui;
+  }
+
+  #frontPage {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+  }
+
+  table {
+    font-family: "Fascinate Inline", system-ui;
+    border-collapse: collapse;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    width: 100%;
+}
+
+  th {
+        border: 1px solid black;
+        padding: 3px;
+        text-align: center;
+        background-color: rgba(239, 239, 239, .3);
+        color: black;
+}
+
+td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        background-color: rgba(239, 239, 239, .3);
+        color: black;
+}
+
+td:hover {
+    background-color: #CA7B80;
+    transition: .75s;
+}
+
+  button {
+    font-family: "Fascinate Inline", system-ui;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #CA7B80; 
+    color: Black;
+    padding: 10px 22px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: none;
+    transition: .5s;
+    letter-spacing: .25em;
+    box-shadow: 0 , 0 , 35px var(--clr);
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.moodDiv {
+  font-family: "Fascinate Inline", system-ui;
+  font-size: 20px;
+  font-weight: 300px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: rgba(239, 239, 239, .4);
+  box-shadow: 0 0 10px 5px rgba(239, 239, 239, .4);
+  box-sizing: content-box;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importing Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fascinate+Inline&family=Macondo+Swash+Caps&family=Monofett&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href='\static\styleScheduleFull.css'> 
+    <title> Todo Task </title>
+</head>
+
+<body>
+<section id="bodyBckg">
+    <nav class="navbar">
+        <div id="navdiv"> 
+            <h1> Accountabilit-E </h1>
+            <ul>
+                <li id="navlist"> <a href="http://127.0.0.1:5000/users/{{user.username}}" style="--clr:#CA7B80" id="nav"> User Page </a> </li>
+                <li id="navlist">  <a href="http://127.0.0.1:5000/users/EditToDoTasks/{{user.username}}" style="--clr:#CA7B80" id="nav"> Edit List </a> </li>
+                <li id="navlist"> <a href="http://127.0.0.1:5000/users/ScheduleMaker/{{user.username}}" style="--clr:#CA7B80" id="nav"> Back </a> </li>
+            </ul>
+            
+        </div>
+    </nav>
+    
+    <div id="form">
+    <h1> To Do Task </h1>
+    
+    <form method="POST">
+        {{ form.hidden_tag() }}
+    
+        {% for field in form if field.widget.input_type != 'hidden' %}
+        <p>
+            {{ field.label }}
+            {{ field }}
+        </p>
+    
+        {% endfor %}
+    
+        <button type="submit"> Submit </button>
+    </form>
+    </div>
+    
+    
+    <table id="todoTable">
+        <thead>
+            <th> Task </th>
+            <th> Task ID </th>
+            <th> Day of Completion </th>
+            <th> Time of Completion </th>
+        </thead>
+    
+        <tbody>
+            {% for task in all_tasks %}
+            <tr>
+                {% if task.user_id == user.id %}
+                <td> {{task.entry}} </td>
+                <td> {{task.id}} </td>
+                <td> {{ task.date_due}} </td>
+                <td> {{task.time}} </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+</body>
+</html>

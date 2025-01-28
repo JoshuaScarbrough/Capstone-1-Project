@@ -1,0 +1,21 @@
+{% extends 'baseUserPage.html' %}
+
+{% block content %}
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <h1> Welcome, {{ user.first_name }} {{ user.last_name }} </h1>
+
+    {% for field in form if field.widget.input_type != 'hidden' %}
+    <p>
+        <h2> How are you feeling today? </h2>
+        {{ field.label }}
+        {{ field }}
+    </p>
+    {% endfor %}  
+
+    <button type="submit"> Submit </button>
+</form>
+
+{% endblock %}

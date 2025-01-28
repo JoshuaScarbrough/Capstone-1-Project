@@ -1,0 +1,160 @@
+body {
+    background-image: url('https://img.freepik.com/free-photo/view-retro-looking-computer-workstation_23-2150805090.jpg?t=st=1731526044~exp=1731529644~hmac=ddf46d21aa4f0735930eef811d1d183fd3d7f949e57a13b059bc870d074a0728&w=900');
+	background-size: 160%;
+    background-position-x: 50%;
+    background-position-y: 22%;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+#navdiv {
+    background-color: rgba(239, 239, 239, .2);
+	margin-bottom: 0px;
+	height: 120px;
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#navdiv {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#navlist {
+
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+#nav {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-family: "Fascinate Inline", system-ui;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .1em;
+    padding: 10px 10px;
+    transition: .5s;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav:hover {
+    background: var(--clr);
+    letter-spacing: .25em;
+    box-shadow: 0 , 0 , 35px var(--clr);
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.bodyBckg {
+
+    background-color: rgba(239, 239, 239, .2);
+	height: 575px;
+}
+
+img {
+	display:inline-block;
+	border-radius: 50%;
+}
+
+header {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-top: 0px;
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+#savedHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-top: 250px;
+}
+
+#savedButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#InstructionsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+#InstructionsDiv h2 {
+    text-align: center;
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 29px;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.instructions button{
+    display: flex;
+    justify-content: center;
+}
+
+#FormDiv {
+    text-align: center;
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button {
+    font-family: "Fascinate Inline", system-ui;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #CA7B80; 
+    color: Black;
+    padding: 10px 22px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: none;
+    transition: .5s;
+    letter-spacing: .25em;
+    box-shadow: 0 , 0 , 35px var(--clr);
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#delete {
+    height: 550px;
+    text-align: center;
+	margin-top: 0px;
+    font-family: "Fascinate Inline", system-ui;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
