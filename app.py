@@ -12,7 +12,7 @@ from datetime import date, timedelta
 app = Flask(__name__)
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:football8114@localhost:5432/capstone1
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres.swovvcjjzcveduuikumr:5918scarfootball8114@aws-0-us-east-2.pooler.supabase.com:5432/capstone1'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres.swovvcjjzcveduuikumr:qwertypasswordpassword123ytrewqscar@aws-0-us-east-2.pooler.supabase.com:5432/capstone1'
 # app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:5918scarfootball8114@db.swovvcjjzcveduuikumr.supabase.co:5432/capstone1"
 
 # app.config['SQLALCHEMY_DATABASE_URI'] ="user=postgres.swovvcjjzcveduuikumr password=5918scarfootball8114 host=aws-0-us-east-2.pooler.supabase.comport=5432 dbname=capstone1"
