@@ -11,7 +11,8 @@ from datetime import date, timedelta
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:football8114@localhost:5432/capstone1'
+"""app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:football8114@localhost:5432/capstone1'"""
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:5918scarbfootball8114@db.swovvcjjzcveduuikumr.supabase.co:5432/capstone1"
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = False
