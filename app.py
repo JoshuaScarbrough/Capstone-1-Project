@@ -11,7 +11,7 @@ from datetime import date, timedelta
 
 app = Flask(__name__)
 
-"""app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:football8114@localhost:5432/capstone1'"""
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:football8114@localhost:5432/capstone1
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:5918scarbfootball8114@db.swovvcjjzcveduuikumr.supabase.co:5432/capstone1"
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -480,7 +480,7 @@ def EditToDoTask(username):
 
 """ This what allows our python app to run"""
 if __name__ == '__main__':
-    // from waitress import serve
-    // serve(app, host="0.0.0.0", port=8080)
+    # from waitress import serve
+    # serve(app, host="0.0.0.0", port=8080)
     app.run(debug=True)
     
