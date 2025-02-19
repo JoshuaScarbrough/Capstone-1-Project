@@ -13,7 +13,10 @@ app = Flask(__name__)
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:football8114@localhost:5432/capstone1
 # app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:5918scarbfootball8114@db.swovvcjjzcveduuikumr.supabase.co:5432/capstone1"
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:5918scarfootball8114@db.swovvcjjzcveduuikumr.supabase.co:5432/capstone1"
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:5918scarfootball8114@db.swovvcjjzcveduuikumr.supabase.co:5432/capstone1"
+
+app.config['SQLALCHEMY_DATABASE_URI'] ="user=postgres.swovvcjjzcveduuikumr password=5918scarfootball8114 host=aws-0-us-east-2.pooler.supabase.comport=5432 dbname=postgres"
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = False
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = True
