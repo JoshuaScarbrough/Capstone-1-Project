@@ -31,6 +31,16 @@ def seedVerse():
         db.session.add(verse)
         db.session.commit()
 
+def seedUser():
+    users = [
+        User.register(first_name = "test", last_name = "User", username = "testUser", password = "password")
+    ]
+
+    for user in users:
+        db.session.add(user)
+        db.session.commit()
+
 """ This what allows our python app to run"""
 if __name__ == '__main__':
     seedVerse()
+    seedUser()
